@@ -1,12 +1,13 @@
+import 'dotenv/config'
+
 import fastify from 'fastify'
 import { memoriesRoutes } from './routes/memories'
 import cors from '@fastify/cors'
 
+const app = fastify()
 app.register(cors, {
   origin: true,
 })
-
-const app = fastify()
 app.register(memoriesRoutes)
 
 app
