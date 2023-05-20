@@ -32,6 +32,7 @@ export async function authRoutes(app: FastifyInstance) {
         Authorization: `Bearer ${access_token}`,
       },
     })
+    console.log('aaaa')
 
     const userSchema = z.object({
       id: z.number(),
